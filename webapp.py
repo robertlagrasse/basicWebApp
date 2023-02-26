@@ -8,12 +8,11 @@ def change():
         st.write('Nobody Home, dawg')
     else:
         line = st.session_state['newItem']
-        st.write(line)
         items.append(line)
         backend.writeItems(items)
 
 
-st.title("Web App Title")
+st.title("Basic Web App")
 st.subheader("Subheader")
 st.write("Checkboxes:")
 
@@ -25,5 +24,5 @@ for index, item in enumerate(items):
         del st.session_state[item]
         st.experimental_rerun()
 
-st.text_input(label="Label", placeholder="Placeholder value",
+st.text_input(label="Text_input box label", placeholder="Placeholder value",
               key='newItem', on_change=change)
