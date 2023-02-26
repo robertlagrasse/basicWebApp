@@ -9,8 +9,6 @@ def change():
     else:
         line = st.session_state['newItem']
         st.write(line)
-        st.write(type(line))
-        st.write(type(items))
         items.append(line)
         backend.writeItems(items)
 
@@ -23,7 +21,6 @@ for index, item in enumerate(items):
     checkbox = st.checkbox(item, key=item)
     if checkbox:
         items.pop(index)
-        print(items)
         backend.writeItems(items)
         del st.session_state[item]
         st.experimental_rerun()
