@@ -2,7 +2,6 @@ import backend
 import streamlit as st
 
 items = backend.getItems()
-st.write(type(items))
 
 def change():
     if 'newItem' not in st.session_state:
@@ -31,5 +30,3 @@ for index, item in enumerate(items):
 
 st.text_input(label="Label", placeholder="Placeholder value",
               key='newItem', on_change=change)
-
-st.write(st.session_state)

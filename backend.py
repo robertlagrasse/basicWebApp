@@ -1,4 +1,4 @@
-ABSOLUTE_PATH = "/home/robert/pyCourse/newWebApp/items.txt"
+ABSOLUTE_PATH = "items.txt"
 
 
 def getItems():
