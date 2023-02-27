@@ -2,6 +2,8 @@ import backend
 import streamlit as st
 
 items = backend.getItems()
+st.set_page_config(layout="centered")
+# st.set_page_config(layout="wide")
 
 def change():
     if 'newItem' not in st.session_state:
