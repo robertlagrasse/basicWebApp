@@ -1,5 +1,6 @@
 import backend
 import streamlit as st
+from PIL import Image
 
 items = backend.getItems()
 st.set_page_config(layout="centered")
@@ -28,3 +29,6 @@ for index, item in enumerate(items):
 
 st.text_input(label="Text_input box label", placeholder="Placeholder value",
               key='newItem', on_change=change)
+
+with st.expander("Start camera"):
+    camera_image = st.camera_input("Camera")
